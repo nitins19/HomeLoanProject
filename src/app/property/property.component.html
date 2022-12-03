@@ -1,0 +1,55 @@
+<body background="https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg">
+  <div>
+    <h2>Property Form</h2>
+    <br>
+    <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+      <br>
+
+      <div class="form-group row">
+        <label for="propertyName" class="col-sm-2 col-form-label"><b>Property Name</b>: </label><br>
+        <div class="col-sm-5">
+
+          <input type="text" class="form-control" id="propertyName" formControlName="propertyName"
+            placeholder="Enter Property Name">
+          <span class="help-block "
+            *ngIf="propertyForm.get('propertyName')?.errors && (propertyForm.get('propertyName')?.touched || propertyForm.get('propertyName')?.dirty)">
+            <span class="text-danger" *ngIf="propertyForm.get('propertyName')?.errors?.['required']">
+              Property name is required
+            </span>
+          </span>
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+        <label for="propertyLocation" class="col-sm-2 col-form-label"><b>Property Location:</b></label><br>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="propertyLocation" formControlName="propertyLocation"
+            placeholder="Enter Property Location">
+          <span class="help-block "
+            *ngIf="propertyForm.get('propertyLocation')?.errors && (propertyForm.get('propertyLocation')?.touched || propertyForm.get('propertyLocation')?.dirty)">
+            <span class="text-danger" *ngIf="propertyForm.get('propertyLocation')?.errors?.['required']">
+              Property Location is required
+            </span>
+          </span>
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+        <label for="amount" class="col-sm-2 col-form-label"><b>Amount</b></label><br>
+        <div class="col-sm-5">
+          <input type="number" class="form-control" id="amount" formControlName="amount" placeholder="Enter Amount">
+          <span class="help-block "
+            *ngIf="propertyForm.get('amount')?.errors && (propertyForm.get('amount')?.touched || propertyForm.get('amount')?.dirty)">
+            <span class="text-danger" *ngIf="propertyForm.get('amount')?.errors?.['required']">
+              Property Amount is required
+            </span>
+          </span>
+
+        </div>
+      </div>
+      <br>
+
+      <button type="submit" class="btn btn-info">NEXT</button>
+    </form>

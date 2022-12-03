@@ -1,0 +1,25 @@
+<body background="https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg">
+  <div>
+    <h2>Self Employed Form</h2>
+    <br>
+
+    <form [formGroup]="selfEmployedForm" (ngSubmit)="onSubmit()">
+      <br>
+      <div class="form-group row">
+        <label for="income" class="col-sm-2 col-form-label"><b>Income: </b></label><br>
+        <div class="col-sm-5">
+          <input type="number" class="form-control" id="income" formControlName="income"
+            placeholder="Enter Overall Income">
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="typeofwork" class="col-sm-2 col-form-label"><b>Type of Work:</b></label><br>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="typeofwork" formControlName="typeofwork"
+            placeholder="Enter Type Of Work">
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-info">NEXT</button>
+    </form>

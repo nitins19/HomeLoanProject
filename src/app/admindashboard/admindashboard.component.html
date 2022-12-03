@@ -1,0 +1,48 @@
+<body>
+
+
+    <div>
+        <table class="table align-middle mb-0 bg-white">
+            <thead style="background-color:black">
+                <tr>
+                    <th>Application Id</th>
+                    <th>Loan Amount</th>
+                    <th>Tenure</th>
+                    <th>Rate of Interest</th>
+                    <th>Status</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Id</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let a of applicationList;">
+
+                    <td> {{a.applicationId}}</td>
+                    <td> {{a.loanAmount}}</td>
+                    <td> {{a.tenure}}</td>
+                    <td> {{a.interest}}</td>
+                    <td>{{ a.status }}</td>
+                    <td>{{ a.user.firstName }}</td>
+                    <td> {{a.user.lastName}}</td>
+                    <td>{{a.user.userId }}</td>
+
+                    <td>
+                        <button class="btn btn-success" [type]="'submit'"
+                            (click)="approveStatus(a.applicationId)">Approve</button>
+
+                        <button class="btn btn-danger" [type]="'submit'"
+                            (click)="rejectStatus(a.applicationId)">Reject</button>
+                    </td>
+
+
+
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>

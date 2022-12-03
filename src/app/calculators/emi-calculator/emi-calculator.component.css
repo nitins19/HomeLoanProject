@@ -1,0 +1,62 @@
+.form-control {
+  width: 200px;
+}
+
+.card {
+  width: 300px;
+  padding: 10px;
+}
+
+body {
+  background-size: cover;
+  min-height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+form {
+  height: 100px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.019);
+
+}
+
+form * {
+  font-family: 'Poppins', sans-serif;
+  color: #080710;
+  letter-spacing: 0.5px;
+}
+
+input {
+  display: block;
+  width: 50%;
+  background-color: rgb(255, 252, 252);
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 8px;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+button {
+  width: 50%;
+  background-color: #0036be;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.div1 {
+  height: 400px;
+  width: 250px;
+  background: rgb(255, 254, 254);
+  border-color: black;
+  border-radius: 25px;
+  opacity: 1px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,36 @@
+<body background="https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg">
+  <br><br>
+  <h1>User Login </h1>
+
+  <div class="div1">
+    <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+        <label for="emailId" class="col-sm-2 col-form-label"><b>Email</b></label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" formControlName="emailId">
+          <span class="help-block "
+            *ngIf="userLoginForm.get('emailId')?.errors && (userLoginForm.get('emailId')?.touched ||userLoginForm.get('emailId')?.dirty)">
+            <span class="text-danger" *ngIf="userLoginForm.get('emailId')?.errors?.['required']">
+              *Field is mandatory
+            </span>
+          </span>
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group row">
+        <label for="password" class="col-sm-2 col-form-label"><b>Password</b></label>
+        <div class="col-sm-5">
+          <input type="password" class="form-control" formControlName="password">
+          <span class="help-block "
+            *ngIf="userLoginForm.get('password')?.errors && (userLoginForm.get('password')?.touched || userLoginForm.get('password')?.dirty)">
+            <span class="text-danger" *ngIf="userLoginForm.get('password')?.errors?.['required']">
+              *Field is mandatory
+            </span>
+          </span>
+        </div>
+      </div>
+      <br>
+      <button type="submit" style="margin-left:15rem" class="btn btn-info">Login</button>
+    </form>
+  </div>

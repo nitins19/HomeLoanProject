@@ -1,0 +1,50 @@
+body {
+    background-size: cover;
+    min-height: 200%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+form {
+    height: 100px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.019);
+
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #080710;
+    letter-spacing: 0.5px;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(250, 246, 246, 0.304);
+    border-radius: 3px;
+    padding: 10 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #0f0b0bd3;
+    align-items: flex-start;
+
+}
+
+button {
+    margin-top: 50px;
+    width: 50%;
+    background-color: #025b0e;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+<body
+  background="https://img.freepik.com/premium-photo/workspace-with-calculator-pen-laptop-note-pastel-green-background_101276-194.jpg?w=2000">
+  <br>
+  <h2 style="text-align: center">ELIGIBILITY CALCULATOR</h2>
+  <div class="row d-flex justify-content-center align-items-center h-50">
+    <div class="div1">
+      <form #eligibilityForm="ngForm" (ngSubmit)="onSubmit(eligibilityForm.value)">
+        <div class="form-group">
+          <h3><label for="monthlyIncome">Monthly Income</label>
+          </h3>
+          <input type="number" class="form-control mb-3" name="monthlyIncome" [ngModel]="monthlyIncome" />
+        </div>
+        <button type="submit" class="btn btn-primary mb-4">Calculate</button>
+        <br><br>
+        <div *ngIf="eligibileLoanAmount" class="card">
+          <div class="card-body">
+            <h3 class="card-body">Your Home Loan Eligibility = &#8377; {{ eligibileLoanAmount }}</h3>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</body>

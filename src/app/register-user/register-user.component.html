@@ -1,0 +1,148 @@
+<body background="https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg">
+    <h3 style="text-align:center;">User Registration</h3>
+    <div class="col-md-6 offset-3 ">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+
+                <div class="col-lg-8 col-xl-8">
+                    <div>
+                        <form [formGroup]="regform" (ngSubmit)="onSubmit()" class="px-md-2">
+                            <div class="form-outline mb-3">
+
+                                <label for="firstName">First Name</label>
+                                <input type="text" style="max-width: 30rem; " formControlName="firstName"
+                                    class="form-control" placeholder="Enter User FirstName">
+                                <span class="help-block "
+                                    *ngIf="regform.get('firstName')?.errors && (regform.get('firstName')?.touched || regform.get('firstName')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('firstName')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+
+                            </div>
+                            <div class="form-outline mb-3">
+
+                                <label for="middleName">Middle Name</label>
+                                <input type="text" style="max-width: 30rem;" formControlName="middleName"
+                                    class="form-control" placeholder="Enter User MiddleName">
+                            </div>
+                            <div class="form-outline mb-3">
+
+                                <label for="lastName">Last Name</label>
+                                <input type="text" style="max-width: 30rem; " formControlName="lastName"
+                                    class="form-control" placeholder="Enter User LastName">
+                                <span class="help-block "
+                                    *ngIf="regform.get('lastName')?.errors && (regform.get('lastName')?.touched || regform.get('lastName')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('lastName')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="form-outline mb-3">
+
+                                <label for="email">Email ID</label>
+                                <input type="email" style="max-width: 30rem; " formControlName="emailId"
+                                    class="form-control" placeholder="Enter User Email">
+                                <span class="help-block "
+                                    *ngIf="regform.get('emailId')?.errors && (regform.get('emailId')?.touched || regform.get('emailId')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('emailId')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+
+                            </div>
+                            <div class="form-outline mb-3">
+                                <label for="password">Password</label>
+                                <input type="password" style="max-width: 30rem;" formControlName="password"
+                                    class="form-control" placeholder="Set Password">
+                                <span class="help-block "
+                                    *ngIf="regform.get('password')?.errors && (regform.get('password')?.touched || regform.get('password')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('password')?.errors?.['required']">
+                                        *Password is mandatory
+                                    </span>
+                                    <span class="text-danger" *ngIf="regform.get('password')?.errors?.['minlength']">
+                                        *Password must be atleast 8 characters long
+                                    </span>
+                                </span>
+
+
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <label for="number">Phone Number</label>
+                                <input type="number" style="max-width: 30rem;" formControlName="phoneno"
+                                    class="form-control" placeholder="Enter Phone Number">
+                                <span class="help-block "
+                                    *ngIf="regform.get('phoneno')?.errors && (regform.get('phoneno')?.touched || regform.get('phoneno')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('phoneno')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <label for="dob">Date Of Birth</label>
+                                <input type="date" style="max-width: 30rem;" formControlName="dob" class="form-control"
+                                    placeholder="Enter DOB">
+                                <span class="help-block "
+                                    *ngIf="regform.get('dob')?.errors && (regform.get('dob')?.touched || regform.get('dob')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('dob')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <label for="gender">Gender</label>
+                                <input type="text" style="max-width: 30rem;" formControlName="gender"
+                                    class="form-control" placeholder="Enter Gender">
+                                <span class="help-block "
+                                    *ngIf="regform.get('gender')?.errors && (regform.get('gender')?.touched || regform.get('gender')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('gender')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <label for="nationality">Nationality</label>
+                                <input type="text" style="max-width: 30rem;" formControlName="nationality"
+                                    class="form-control" placeholder="Enter Nationality">
+                                <span class="help-block "
+                                    *ngIf="regform.get('nationality')?.errors && (regform.get('nationality')?.touched || regform.get('nationality')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('nationality')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <label for="aadharnumber">Aadhar Number</label>
+                                <input type="number" style="max-width: 30rem;" formControlName="aadhar"
+                                    class="form-control" placeholder="Enter Aadhar Number">
+                                <span class="help-block "
+                                    *ngIf="regform.get('aadhar')?.errors && (regform.get('aadhar')?.touched || regform.get('aadhar')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('aadhar')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <label for="pannumber">Pan Number</label>
+                                <input type="text" style="max-width: 30rem;" formControlName="pan" class="form-control"
+                                    placeholder="Enter Pan Number">
+                                <span class="help-block "
+                                    *ngIf="regform.get('pan')?.errors && (regform.get('pan')?.touched || regform.get('pan')?.dirty)">
+                                    <span class="text-danger" *ngIf="regform.get('pan')?.errors?.['required']">
+                                        *Field is mandatory
+                                    </span>
+                                </span>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-m mb-1">NEXT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,34 @@
+<body
+  background="https://img.freepik.com/premium-photo/workspace-with-calculator-pen-laptop-note-pastel-green-background_101276-194.jpg?w=2000">
+
+  <br>
+  <h2 style="text-align: center;">EMI CALCULATOR</h2>
+  <div class="row d-flex justify-content-center align-items-center h-75">
+    <div class="div1">
+      <form #emiForm="ngForm" (ngSubmit)="onSubmit(emiForm.value)">
+        <div class="form-group">
+          <h5><label for="loanAmount">Loan Amount</label></h5>
+          <input type="number" class="form-control mb-4" name="loanAmount" [ngModel]="loanAmount" />
+        </div>
+        <div class="form-group">
+          <h5><label for="tenureInMonths">Tenure in Months</label></h5>
+          <input type="number" class="form-control mb-4" name="tenureInMonths" [ngModel]="tenureInMonths" />
+        </div>
+        <div class="form-group mb-4">
+          <label for="interest">Interest 8.5%</label>
+        </div>
+        <button type="submit" class="btn btn-primary mb-4">Calculate</button>
+        <div *ngIf="emi" class="card">
+          <div class="card-body">
+            <h3 class="card-title">
+              EMI = &#8377; {{ emi }}
+            </h3>
+          </div>
+        </div>
+        <div *ngIf="emi" class="mt-4">
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,25 @@
+<body background="https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg">
+  <div>
+    <h2 style="padding-left:8rem">Admin Login</h2>
+    <br>
+    <br>
+    <form #loginform="ngForm" (ngSubmit)="adminlogin()" class="form-horizontal">
+
+      <div class="form-group row">
+        <label for="userName" class="col-sm-2 col-form-label"><b>Username</b></label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" placeholder="Username" name="userName" [(ngModel)]="admin.userName">
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="password" class="col-sm-2 col-form-label"><b>Password</b></label>
+        <div class="col-sm-5">
+          <input type="password" class="form-control" placeholder="Password" name="password"
+            [(ngModel)]="admin.password">
+        </div>
+      </div>
+      <br>
+      <button type="submit" style="margin-left:15rem" class="btn btn-info">Log In</button>
+
+    </form>

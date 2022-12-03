@@ -1,0 +1,54 @@
+<body background="https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg">
+
+  <div>
+    <h2 tyle="padding-left:8rem">Loan Application Form</h2>
+    <br>
+
+    <form [formGroup]="LoanApplicationForm" (ngSubmit)="onSubmit()">
+      <br>
+      <div class="form-group row">
+        <label for="loanAmount" class="col-sm-2 col-form-label"><b>Loan Amount: </b></label><br>
+        <div class="col-sm-5">
+          <input type="number" class="form-control" id="loanAmount" formControlName="loanAmount"
+            placeholder="Enter loanAmount">
+          <span class="help-block "
+            *ngIf="LoanApplicationForm.get('loanAmount')?.errors && (LoanApplicationForm.get('loanAmount')?.touched || LoanApplicationForm.get('loanAmount')?.dirty)">
+            <span class="text-danger" *ngIf="LoanApplicationForm.get('loanAmount')?.errors?.['required']">
+              Loan Amount is required
+            </span>
+          </span>
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="tenure" class="col-sm-2 col-form-label"><b>Tenure: </b></label><br>
+        <div class="col-sm-5">
+          <input type="number" class="form-control" id="tenure" formControlName="tenure" placeholder="Enter tenure">
+          <span class="help-block "
+            *ngIf="LoanApplicationForm.get('tenure')?.errors && (LoanApplicationForm.get('tenure')?.touched || LoanApplicationForm.get('tenure')?.dirty)">
+            <span class="text-danger" *ngIf="LoanApplicationForm.get('tenure')?.errors?.['required']">
+              Tenure is required
+            </span>
+          </span>
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="interest" class="col-sm-2 col-form-label"><b>Interest: </b></label><br>
+        <div class="col-sm-5">
+          <input type="number" class="form-control" id="interest" formControlName="interest"
+            placeholder="Enter interest">
+          <span class="help-block "
+            *ngIf="LoanApplicationForm.get('interest')?.errors && (LoanApplicationForm.get('interest')?.touched || LoanApplicationForm.get('interest')?.dirty)">
+            <span class="text-danger" *ngIf="LoanApplicationForm.get('interest')?.errors?.['required']">
+              Interest is required
+            </span>
+          </span>
+
+        </div>
+      </div>
+      <br>
+
+      <br>
+      <button type="submit" style="margin-left:15rem" class="btn btn-info"><b>SUBMIT</b></button>
+    </form>

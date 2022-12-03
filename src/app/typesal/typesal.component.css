@@ -1,0 +1,29 @@
+body {
+    background-size: cover;
+    min-height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: auto;
+}
+
+
+button {
+    background-color: #148c1a;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.div-1 {
+    height: 300px;
+    width: 500px;
+    background-image: url("https://www.thestatesman.com/wp-content/uploads/2017/08/1483561102-home-loan-11.jpg");
+    border-radius: 25px;
+    opacity: 1px;
+    padding: 15px;
+
+
+}

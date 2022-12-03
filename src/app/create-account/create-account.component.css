@@ -1,0 +1,10 @@
+.accountform {
+    align-items: center;
+    width: 400px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.box {
+    background-color: grey;
+}

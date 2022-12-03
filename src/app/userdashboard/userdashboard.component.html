@@ -1,0 +1,26 @@
+<body>
+
+  <table class="table align-middle mb-0 bg-white">
+    <thead style="background-color:black">
+      <tr>
+        <th scope="col">Application Id</th>
+        <th scope="col">Name of Applicant</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-success" *ngFor="let a of applicationList;">
+        <td> {{a.applicationId}}</td>
+        <td>{{a.user.firstName}}{{a.user.lastName}}</td>
+        <td>{{ a.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div class="d-grid gap-2 col-1 mx-auto">
+    <button class="btn btn-primary" type="button" (click)="track()" [ngStyle]="{}">Track</button>
+  </div>
+  <br>
+  <p [ngStyle]="{'text-align':'center'}"><strong><u>If Approved, track your account by clicking above.</u></strong></p>
+
+</body>
