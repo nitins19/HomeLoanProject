@@ -1,4 +1,5 @@
 # LTI_HomeLoan
+LoanAppProject contains code written in SpringBoot.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
